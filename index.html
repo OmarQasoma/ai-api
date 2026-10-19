@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tonlägesändraren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Tonlägesändraren</h1>
+        </header>
+
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <label for="api-key">Gemini API-nyckel:</label>
+                <input type="password" id="api-key" placeholder="Klistra in din API-nyckel här">
+            </div>
+
+            <div class="form-group">
+                <label for="input-text">Din text:</label>
+                <textarea id="input-text" rows="5" placeholder="Klistra in texten du vill omvandla..."></textarea>
+            </div>
+
+            <fieldset class="tone-buttons">
+                <legend>Välj tonläge:</legend>
+                <button type="button" class="tone-btn" data-tone="Professionell och formell">Professionell</button>
+                <button type="button" class="tone-btn" data-tone="Diplomatisk">Diplomatisk</button>
+                <button type="button" class="tone-btn" data-tone="Trevlig och avslappnad">Avslappnad</button>
+                <button type="button" class="tone-btn" data-tone="Kort och koncis">Kort & Koncis</button>
+            </fieldset>
+        </form>
+
+        <section class="output-container">
+            <label for="output-text">Resultat:</label>
+            <textarea id="output-text" rows="5" readonly placeholder="Omvandlad text visas här..."></textarea>
+            <output id="status-message" class="status"></output>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

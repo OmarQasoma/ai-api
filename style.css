@@ -1,0 +1,28 @@
+body {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 16px;
+}
+
+label, input, textarea {
+    display: block;
+    margin-top: 8px;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.tone-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.error {
+    color: brown;
+}
