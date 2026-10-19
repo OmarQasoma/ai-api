@@ -23,7 +23,7 @@ toneButtons.forEach(button => {
           'x-goog-api-key': apiKey
           },
         body: JSON.stringify({
-             model: 'gemini-3.6-flash',
+             model: 'gemini-2.5-flash-lite',
              input: `Skriv om följande text: ${text}. Skriv med en ${tone} ton. Ge bara ett alternativ och svara enbart med den nya texten. Skriv inte något annat än den nya texten.`
 
           })
@@ -33,7 +33,7 @@ toneButtons.forEach(button => {
          console .log('Response:', data);
 
     } catch (error) {
-        console.error('Error:', error);
+       console.error('Gemini error:', error.message);
     }
   });   
 
